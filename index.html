@@ -5,13 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid prøve</title>
+    <style>
+        div.header {
+            background-color: blueviolet;
+        }
+        div.menu {
+            background-color: sienna;
+        }
+        div.content {
+            background-color: lawngreen;
+        }
+        div.footer {
+            background-color: tomato;
+        }
+
+        .page {
+            display: grid;
+        }
+    </style>
 </head>
 <body>
-    <div>Header</div>
-    <div>Menu</div>
-    <div>#Content</div>
-    <div>Footer</div>
-    
+    <div class="page">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="content">#Content</div>
+    <div class="footer">Footer</div>
+    </div>
+
+
+
 <!--Arrow to direct you to the top of the page-->
     <a style="width: auto;
     position: fixed;
