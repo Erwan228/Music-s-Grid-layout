@@ -1,66 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grid prøve</title>
     <style>
-        body {
-            padding: 0px;
-            margin: 0px;
-        }
-        
-        .page {
-            height: 100vh;
-            display: grid;
-            grid-template-areas: 'header header'
-                                'menu content'
-                                'footer footer';
-            grid-template-columns: 80px 1fr;
-            grid-template-rows: 50px 1fr 20px;
-        }
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
 
-        div.header {
-            background-color: blueviolet;
-            grid-area: header;
-        }
-        div.menu {
-            background-color: sienna;
-            grid-area: menu;
-        }
-        div.content {
-            background-color: lawngreen;
-            grid-area: content;
-        }
-        div.footer {
-            background-color: tomato;
-            grid-area: footer;
-        }
+      .page {
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "menu content"
+          "footer footer";
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 50px 1fr 20px;
+      }
+
+      div.header {
+        background-color: blueviolet;
+        grid-area: header;
+      }
+      div.menu {
+        background-color: sienna;
+        grid-area: menu;
+      }
+      div.content {
+        background-color: lawngreen;
+        grid-area: content;
+      }
+      div.footer {
+        background-color: tomato;
+        grid-area: footer;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .page {
+        grid-template-areas:
+            'header'
+            'menu'
+            'content'
+            'footer';
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 1fr 4fr 20px;
+      }
+        
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="page">
-    <div class="header">Header</div>
-    <div class="menu">Menu</div>
-    <div class="content">And welcome back to <a href="https://www.youtube.com/playlist?list=PL2LyH4NoXrRUzUi9YLM76528p_5DO9EEA" target="_blank">#CONTENT</a></div>
-    <div class="footer">Footer</div>
+      <div class="header">Header</div>
+      <div class="menu">Menu</div>
+      <div class="content">
+        And welcome back to
+        <a
+          href="https://www.youtube.com/playlist?list=PL2LyH4NoXrRUzUi9YLM76528p_5DO9EEA"
+          target="_blank"
+          >#CONTENT</a
+        >
+      </div>
+      <div class="footer">Footer</div>
     </div>
 
-
-
-<!--Arrow to direct you to the top of the page-->
-    <a style="width: auto;
-    position: fixed;
-    z-index: 1;
-    top: 93%;
-    left: 97%;
-    overflow-x: hidden;
-    background-color: rgba(238, 238, 238, 0.363);
-    border-radius: 10px;
-    padding-top: 2px;
-    user-select: none;" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-  &#x2191;
-</a>
-</body>
+    <!--Arrow to direct you to the top of the page-->
+    <a
+      style="
+        width: auto;
+        position: fixed;
+        z-index: 1;
+        top: 93%;
+        left: 97%;
+        overflow-x: hidden;
+        background-color: rgba(238, 238, 238, 0.363);
+        border-radius: 10px;
+        padding-top: 2px;
+        user-select: none;
+      "
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    >
+      &#x2191;
+    </a>
+  </body>
 </html>
